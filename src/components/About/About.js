@@ -1,8 +1,7 @@
-import { useState } from 'react';
-  import './About.css';
-  	
+import './About.css';
+
   function About() {
-  	
+
     return (
       <div className="container">
          <h2> Page About </h2>
