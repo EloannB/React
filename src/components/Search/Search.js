@@ -3,13 +3,17 @@ import './Search.css';
 
 function Search() {
 
+    const navigate = useNavigate()
+
     const handleSubmit = (e) => {
-        const form = e.target
-        const formData = new formData(form)
-        console.log(formData)
-        console.log(formData.get('search'))
-         
-    }
+        
+        e.preventDefault()
+        
+        const form = e.target; 
+        const formData = new FormData(form)    
+        console.log(formData.get('search'))    
+        navigate(`/List/${formData.get('search')}`)
+      }
 
 
     return (
@@ -18,7 +22,7 @@ function Search() {
             <form onSubmit={handleSubmit}>
 
                 <fieldset>
-                    <label htmlFor="idSearch">Votre recherche</label>
+                    <label htmlFor="idSearch">Votre recherche :</label>
                     <input id="idSearch" name="search" type="text" />
 
                 </fieldset>
