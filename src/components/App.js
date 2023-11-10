@@ -8,6 +8,7 @@ import List from './List/List';
 
 export default function App() {
   return (
+    <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -17,6 +18,7 @@ export default function App() {
         </Route>
 
       </Routes>
+    </div>
   );
 }
 
