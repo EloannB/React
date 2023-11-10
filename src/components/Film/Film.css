@@ -1,10 +1,25 @@
 .film {
-    display: flex;
-    margin: 15px;
-    border: 1px solid black;
-}
-
-.film img {
-    width: 150px;
-    padding: 5px;
-}
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .film:hover {
+    transform: scale(1.05);
+  }
+  
+  .film img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .film p {
+    padding: 15px;
+    text-align: left;
+    color: #333;
+  }
